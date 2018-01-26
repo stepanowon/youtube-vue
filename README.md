@@ -13,19 +13,19 @@ MIT
 <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/stepanowon/youtube-vue/master/dist/youtube-vue.min.js"></script>
 <script type="text/javascript">
-    Vue.use(VueTube)
+    Vue.use(YoutubeVue)
 </script>
 ~~~
 #### CDN - usage
 ~~~
 <div id="app">
     <div>
-        <vue-tube :videoid="video_id" :loop="loop" :autoplay="autoplay" />
+        <youtube-vue :videoid="video_id" :loop="loop" :autoplay="autoplay" />
     </div>
 </div>
 ......
 <script type="text/javascript">
-    Vue.use(VueTube)
+    Vue.use(YoutubeVue)
     new Vue({
         el : "#app",
         data : {
@@ -38,20 +38,20 @@ MIT
 ##
 #### NPM Registry - install
 ~~~
-npm install --save vue-tube
+npm install --save youtube-vue
 - or -
-yarn add vue-tube
+yarn add youtube-vue
 ~~~
 
 #### NPM Registry - usage
 ~~~
-<VueTube :videoid="video_id" :width="640" :height="480" :autoplay="1" :loop="1" :listType="listType" :list="list" />
+<YoutubeVue :videoid="video_id" :width="640" :height="480" :autoplay="1" :loop="1" :listType="listType" :list="list" />
 ......
 <script>
-import VueTube from 'vue-tube'
+import YoutubeVue from 'youtube-vue'
 
 export default {
-  components: { VueTube },
+  components: { YoutubeVue },
 }
 </script>
 ~~~
