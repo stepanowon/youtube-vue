@@ -4,14 +4,14 @@ This is based on https://developers.google.com/youtube/player_parameters?hl=en
 
 > Contact : stepanowon@hotmail.com (Stephen Won : 원형섭)
 >
-> Online Demo : [jsfiddle](https://jsfiddle.net/v0wffu6z), [single html](http://sample.bmaster.kro.kr/vuetube-sample.html) 
+> Online Demo : [jsfiddle](https://jsfiddle.net/v0wffu6z), [single html](http://sample.bmaster.kro.kr/youtube-vue-sample.html) 
 ## License
 MIT
 ## Usage  
 #### CDN - install
 ~~~
 <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
-<script type="text/javascript" src="https://cdn.rawgit.com/stepanowon/vue-tube/master/dist/vue-tube.min.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/stepanowon/youtube-vue/master/dist/youtube-vue.min.js"></script>
 <script type="text/javascript">
     Vue.use(VueTube)
 </script>
