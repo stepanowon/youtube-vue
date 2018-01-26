@@ -42,21 +42,21 @@ module.exports = [
     merge(commonConfig, {
         entry: path.resolve(__dirname + '/src/plugin.js'),
         output: {
-            filename: 'vue-tube.min.js',
+            filename: 'youtube-vue.min.js',
             libraryTarget: 'window',
-            library: 'VueTube'
+            library: 'YoutubeVue'
         }
     }),
   
     // Config 2: For Node-based development environments
     merge(commonConfig, {
-        entry: path.resolve(__dirname + '/src/VueTube.vue'),
+        entry: path.resolve(__dirname + '/src/YoutubeVue.vue'),
         output: {
-          filename: 'vue-tube.js',
+          filename: 'youtube-vue.js',
           libraryTarget: 'umd',
     
           // These options are useful if the user wants to load the module with AMD
-          library: 'vue-tube',
+          library: 'youtube-vue',
           umdNamedDefine: true
         }
     })

@@ -1,7 +1,7 @@
-import VueTube from './VueTube.vue';
+import YoutubeVue from './YoutubeVue.vue';
 
 module.exports = {
   install: function (Vue, options) {
-    Vue.component('vue-tube', VueTube);
+    Vue.component('youtube-vue', YoutubeVue);
   }
 };

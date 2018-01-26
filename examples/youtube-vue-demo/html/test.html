@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+    <script type="text/javascript" src="http://cdn.rawgit.com/stepanowon/vue-tube/master/dist/vue-tube.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <div>
+        <vue-tube :videoid="video_id" :loop="loop" />
+    </div>
+</div>
+<script type="text/javascript">
+    Vue.component('VueTube', VueTube);
+    new Vue({
+        el : "#app",
+        data : {
+            video_id:"PABUl_EX_hw", loop:0
+        }
+    })
+</script>
+</body>
+</html>
