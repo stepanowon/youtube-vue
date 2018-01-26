@@ -4,7 +4,7 @@ This is based on https://developers.google.com/youtube/player_parameters?hl=en
 
 > Contact : stepanowon@hotmail.com (Stephen Won : 원형섭)
 >
-> Online Demo : [jsfiddle](https://jsfiddle.net/v0wffu6z), [single html](http://sample.bmaster.kro.kr/youtube-vue-sample.html) 
+> Online Demo : [jsfiddle](https://jsfiddle.net/boj2h8h8), [single html](http://sample.bmaster.kro.kr/youtube-vue-sample.html) 
 ## License
 MIT
 ## Usage  
