@@ -10,13 +10,13 @@
       <button @click="stopCurrentVideo">Stop</button>
       <button @click="pauseCurrentVideo">Pause</button>
     </div>
-    <YoutubeVue ref="vueTube" :videoid="play.video_id" :width="640" :height="480" :autoplay="1" :loop="play.loop" :listType="play.listType" 
+    <YoutubeVue ref="player" :videoid="play.video_id" :width="640" :height="480" :autoplay="1" :loop="play.loop" :listType="play.listType" 
       :list="play.list" @ended="onEnded" @paused="onPaused" @played="onPlayed"/>
   </div>
 </template>
 
 <script>
-import YoutubeVue from './components/YoutubeVue'
+import YoutubeVue from 'youtube-vue'
 
 export default {
   name: 'App',
@@ -34,13 +34,13 @@ export default {
       this.play = Object.assign(this.play, this.temp)
     },
     playCurrentVideo() {
-      this.$refs.vueTube.playVideo();
+      this.$refs.player.playVideo();
     },
     stopCurrentVideo() {
-      this.$refs.vueTube.stopVideo();
+      this.$refs.player.stopVideo();
     },
     pauseCurrentVideo() {
-      this.$refs.vueTube.pauseVideo();
+      this.$refs.player.pauseVideo();
     },
     onEnded() {
       console.log("## OnEnded")

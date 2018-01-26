@@ -52,6 +52,7 @@ import YoutubeVue from 'youtube-vue'
 
 export default {
   components: { YoutubeVue },
+  ......
 }
 </script>
 ~~~
