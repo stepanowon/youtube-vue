@@ -1,4 +1,4 @@
-# vue-tube 
+# youtube-vue 
 Youtube Player Component for Vue.js 2.x.
 This is based on https://developers.google.com/youtube/player_parameters?hl=en 
 
