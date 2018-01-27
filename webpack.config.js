@@ -38,7 +38,7 @@ var commonConfig = {
 
 module.exports = [
 
-    // Config 1: For browser environment
+    // 설정 1: 브라우저 환경에서 CDN으로 사용하기 위해
     merge(commonConfig, {
         entry: path.resolve(__dirname + '/src/plugin.js'),
         output: {
@@ -48,14 +48,12 @@ module.exports = [
         }
     }),
   
-    // Config 2: For Node-based development environments
+    // Config 2: npm install로 참조하여 사용하기 위해
     merge(commonConfig, {
         entry: path.resolve(__dirname + '/examples/youtube-vue-demo/src/components/YoutubeVue.vue'),
         output: {
           filename: 'youtube-vue.js',
           libraryTarget: 'umd',
-    
-          // These options are useful if the user wants to load the module with AMD
           library: 'youtube-vue',
           umdNamedDefine: true
         }
