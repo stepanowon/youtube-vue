@@ -50,7 +50,7 @@ module.exports = [
   
     // Config 2: For Node-based development environments
     merge(commonConfig, {
-        entry: path.resolve(__dirname + '/src/YoutubeVue'),
+        entry: path.resolve(__dirname + '/examples/youtube-vue-demo/src/components/YoutubeVue.vue'),
         output: {
           filename: 'youtube-vue.js',
           libraryTarget: 'umd',
