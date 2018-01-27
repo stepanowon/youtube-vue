@@ -1,4 +1,4 @@
-import YoutubeVue from './YoutubeVue.vue';
+import YoutubeVue from './YoutubeVue';
 
 module.exports = {
   install: function (Vue, options) {
