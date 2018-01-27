@@ -5,3 +5,4 @@ module.exports = {
     Vue.component('youtube-vue', YoutubeVue);
   }
 };
+
