@@ -5796,8 +5796,8 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-youtube-vue@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/youtube-vue/-/youtube-vue-0.2.0.tgz#517dc60aa672d7f8e80d5e47bc2bb6ae1ec962ba"
+youtube-vue@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/youtube-vue/-/youtube-vue-0.2.1.tgz#72f10bf6f3335f87594e4e6e755f6bdc86c6f9f5"
   dependencies:
     vue "^2.5.13"

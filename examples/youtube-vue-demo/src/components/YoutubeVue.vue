@@ -38,11 +38,11 @@ export default {
                         this.$emit('ready')
                     },
                     'onStateChange': (e) => {
-                        if (e.data === YT.PlayerState.ENDED) {
+                        if (e.data === window.YT.PlayerState.ENDED) {
                             this.$emit('ended')
-                        } else if (e.data === YT.PlayerState.PAUSED) {
+                        } else if (e.data === window.YT.PlayerState.PAUSED) {
                             this.$emit('paused')
-                        } else if (e.data === YT.PlayerState.PLAYING) {
+                        } else if (e.data === window.YT.PlayerState.PLAYING) {
                             this.$emit('played')
                         }
                     }
