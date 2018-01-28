@@ -34,7 +34,7 @@ export default {
             },
             events : {
                 'onReady': (e) => {
-                    console.log("### Ready")
+                    this.$emit('ready')
                 },
                 'onStateChange': (e) => {
                     if (e.data === YT.PlayerState.ENDED) {
