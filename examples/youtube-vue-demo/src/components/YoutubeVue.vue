@@ -20,33 +20,36 @@ export default {
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
         }
 
-        this.player = new YT.Player('player', {
-            height: this.height,
-            width: this.width,
-            videoId: this.videoid,
-            playerVars : {
-                list: this.list,
-                listType: this.listType,
-                hl: this.hl,
-                loop: this.loop,
-                rel: this.rel,
-                autoplay: this.autoplay,  
-            },
-            events : {
-                'onReady': (e) => {
-                    this.$emit('ready')
+        let vueInstance = this;
+        window.onYouTubeIframeAPIReady = () => {
+            vueInstance.player = new window.YT.Player('player', {
+                height: this.height,
+                width: this.width,
+                videoId: this.videoid,
+                playerVars : {
+                    list: this.list,
+                    listType: this.listType,
+                    hl: this.hl,
+                    loop: this.loop,
+                    rel: this.rel,
+                    autoplay: this.autoplay,  
                 },
-                'onStateChange': (e) => {
-                    if (e.data === YT.PlayerState.ENDED) {
-                        this.$emit('ended')
-                    } else if (e.data === YT.PlayerState.PAUSED) {
-                        this.$emit('paused')
-                    } else if (e.data === YT.PlayerState.PLAYING) {
-                        this.$emit('played')
+                events : {
+                    'onReady': (e) => {
+                        this.$emit('ready')
+                    },
+                    'onStateChange': (e) => {
+                        if (e.data === YT.PlayerState.ENDED) {
+                            this.$emit('ended')
+                        } else if (e.data === YT.PlayerState.PAUSED) {
+                            this.$emit('paused')
+                        } else if (e.data === YT.PlayerState.PLAYING) {
+                            this.$emit('played')
+                        }
                     }
                 }
-            }
-        });
+            });
+        }
     },
     /**
     * @Properties
@@ -94,6 +97,7 @@ export default {
     },
     methods : {
         playVideo(){
+            console.log(this.player)
             this.player.playVideo();
         },
         stopVideo() {
