@@ -1,6 +1,6 @@
 {
   "name": "youtube-vue",
-  "version": "0.1.2",
+  "version": "0.2.0S",
   "description": "Youtbe player component for vue.js 2.x",
   "main": "dist/youtube-vue.js",
   "scripts": {
