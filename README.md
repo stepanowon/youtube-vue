@@ -107,6 +107,7 @@ export default {
   * ended : when current video is ended
   * paused : when current video is pauded 
   * played : when video is played
+  * ready : when player is ready state
 
 
 
