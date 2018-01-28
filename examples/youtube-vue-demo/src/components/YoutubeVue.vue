@@ -20,9 +20,8 @@ export default {
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
         }
 
-        let vueInstance = this;
         window.onYouTubeIframeAPIReady = () => {
-            vueInstance.player = new window.YT.Player('player', {
+            this.player = new window.YT.Player('player', {
                 height: this.height,
                 width: this.width,
                 videoId: this.videoid,
