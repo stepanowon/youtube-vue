@@ -1,7 +1,7 @@
 <template>
     <div class="styleContainer">
-        <iframe id="player" :style="stylePlayer" type="text/html" 
-            :width="width" :height="height"
+        <iframe id="youtube-vue-player" :style="stylePlayer" type="text/html" 
+            :width="width" :height="height" :origin="origin"
             :src="videoSrc" :title="videoid"
             frameBorder="0"
             allowFullScreen="1" />
@@ -12,43 +12,13 @@
 export default {
     name: 'youtube-vue',
     mounted() {
-        if (!document.getElementById('youtube-vue-player')) {
-            let tag = document.createElement('script');
-            tag.id = 'youtube-vue-player';
-            tag.src = 'https://www.youtube.com/iframe_api';
-            var firstScriptTag = document.getElementsByTagName('script')[0];
-            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-        }
-
+        this.mountPlayer();
         window.onYouTubeIframeAPIReady = () => {
-            this.player = new window.YT.Player('player', {
-                height: this.height,
-                width: this.width,
-                videoId: this.videoid,
-                playerVars : {
-                    list: this.list,
-                    listType: this.listType,
-                    hl: this.hl,
-                    loop: this.loop,
-                    rel: this.rel,
-                    autoplay: this.autoplay,  
-                },
-                events : {
-                    'onReady': (e) => {
-                        this.$emit('ready')
-                    },
-                    'onStateChange': (e) => {
-                        if (e.data === window.YT.PlayerState.ENDED) {
-                            this.$emit('ended')
-                        } else if (e.data === window.YT.PlayerState.PAUSED) {
-                            this.$emit('paused')
-                        } else if (e.data === window.YT.PlayerState.PLAYING) {
-                            this.$emit('played')
-                        }
-                    }
-                }
-            });
+            this.configPlayer();
         }
+    },
+    beforeUpdate() {
+        this.configPlayer();
     },
     /**
     * @Properties
@@ -95,8 +65,46 @@ export default {
         }
     },
     methods : {
+        mountPlayer() {
+            if (!document.getElementById('youtube-vue-player-script')) {
+                let tag = document.createElement('script');
+                tag.id = 'youtube-vue-player-script';
+                tag.src = 'https://www.youtube.com/iframe_api';
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+            }
+        },
+        configPlayer() {
+            this.player = null;
+            this.player = new window.YT.Player('youtube-vue-player', {
+                height: this.height,
+                width: this.width,
+                videoId: this.videoid,
+                playerVars : {
+                    list: this.list,
+                    listType: this.listType,
+                    hl: this.hl,
+                    loop: this.loop,
+                    rel: this.rel,
+                    autoplay: this.autoplay,  
+                },
+                events : {
+                    'onReady': (e) => {
+                        this.$emit('ready')
+                    },
+                    'onStateChange': (e) => {
+                        if (e.data === window.YT.PlayerState.ENDED) {
+                            this.$emit('ended')
+                        } else if (e.data === window.YT.PlayerState.PAUSED) {
+                            this.$emit('paused')
+                        } else if (e.data === window.YT.PlayerState.PLAYING) {
+                            this.$emit('played')
+                        }
+                    }
+                }
+            });
+        },
         playVideo(){
-            console.log(this.player)
             this.player.playVideo();
         },
         stopVideo() {
