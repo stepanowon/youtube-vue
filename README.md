@@ -5,8 +5,7 @@ This is based on https://developers.google.com/youtube/player_parameters?hl=en
 
 > Contact : stepanowon@hotmail.com   
 > Author : Stephen Won(원형섭), OpenSG Inc.  
-> Online Demo1 : [jsfiddle](https://jsfiddle.net/boj2h8h8)  
-> Online Demo2 : http://sample.bmaster.kro.kr/youtube-vue/
+> Online Demo : http://sample.bmaster.kro.kr/youtube-vue/
 
 ## Screen Shot
 #### by videoid
@@ -60,14 +59,61 @@ yarn add youtube-vue
 
 #### NPM Registry - usage
 ~~~
-<YoutubeVue :videoid="video_id" :width="640" :height="480" :autoplay="1" :loop="1" :listType="listType" :list="list" />
-......
+<template>
+  <div id="app">
+    <div>
+      video_id : <input type="text" v-model="temp.video_id" /><br />
+      listType : <input type="text"  v-model="temp.listType" /><br />
+      list : <input type="text"  v-model="temp.list" /><br />
+      loop : <input type="number"  v-model.number="temp.loop" /><br />
+      <button @click="applyConfig">Apply</button>
+      <button @click="playCurrentVideo">Play</button>
+      <button @click="stopCurrentVideo">Stop</button>
+      <button @click="pauseCurrentVideo">Pause</button>
+    </div>
+    <YoutubeVue ref="player" :videoid="play.video_id" :width="640" :height="480" :autoplay="1" :loop="play.loop" :listType="play.listType" 
+      :list="play.list" @ended="onEnded" @paused="onPaused" @played="onPlayed"/>
+  </div>
+</template>
+
 <script>
-import YoutubeVue from 'youtube-vue'
+import YoutubeVue from './components/YoutubeVue.vue'
+//import YoutubeVue from 'youtube-vue'
 
 export default {
-  components: { YoutubeVue },
-  ......
+  name: 'App',
+  data() {
+    return { 
+      temp: { video_id:"PABUl_EX_hw", listType:"search", list:"", loop:0 },
+      play : { video_id:"PABUl_EX_hw", listType:"search", list:"", loop:0 }
+    }
+  },
+  components: {
+    YoutubeVue
+  },
+  methods: {
+    applyConfig() {
+      this.play = Object.assign(this.play, this.temp)
+    },
+    playCurrentVideo() {
+      this.$refs.player.playVideo();
+    },
+    stopCurrentVideo() {
+      this.$refs.player.stopVideo();
+    },
+    pauseCurrentVideo() {
+      this.$refs.player.pauseVideo();
+    },
+    onEnded() {
+      console.log("## OnEnded")
+    },
+    onPaused() {
+      console.log("## OnPaused")
+    },
+    onPlayed() {
+      console.log("## OnPlayed")
+    }
+  }
 }
 </script>
 ~~~
