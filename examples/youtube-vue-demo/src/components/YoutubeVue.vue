@@ -6,7 +6,7 @@
 
 <script>
 export default {
-    name: 'youtube-vue',
+    name: 'YoutubeVue',
     mounted() {
         this.mountPlayer();
         window.onYouTubeIframeAPIReady = () => {
