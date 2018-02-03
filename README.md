@@ -6,6 +6,19 @@ This is based on https://developers.google.com/youtube/player_parameters?hl=en
 > Contact : stepanowon@hotmail.com   
 > Author : Stephen Won(원형섭), OpenSG Inc.  
 > Online Demo1 : [jsfiddle](https://jsfiddle.net/boj2h8h8)  
+> Online Demo2 : http://sample.bmaster.kro.kr/youtube-vue/
+
+## Screen Shot
+#### by videoid
+<img src="https://raw.githubusercontent.com/stepanowon/youtube-vue/master/images/videoid.jpg" width="640" height="480" />
+
+#### by search
+<img src="https://raw.githubusercontent.com/stepanowon/youtube-vue/master/images/search.jpg" width="640" height="480" />
+
+#### by playlist
+<img src="https://raw.githubusercontent.com/stepanowon/youtube-vue/master/images/playlist.jpg" width="640" height="480" />
+
+
 
 ## License
 MIT 

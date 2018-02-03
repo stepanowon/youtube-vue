@@ -1,10 +1,6 @@
 <template>
     <div class="styleContainer">
-        <iframe id="youtube-vue-player" :style="stylePlayer" type="text/html" 
-            :width="width" :height="height" :origin="origin"
-            :src="videoSrc" :title="videoid"
-            frameBorder="0"
-            allowFullScreen="1" />
+        <div id="youtube-vue-player"></div>
     </div>
 </template>
 
@@ -17,8 +13,11 @@ export default {
             this.configPlayer();
         }
     },
-    beforeUpdate() {
-        this.configPlayer();
+    watch : {
+        joinedProps : function() {
+            this.mountPlayer();
+            this.configPlayer();
+        }
     },
     /**
     * @Properties
@@ -46,6 +45,9 @@ export default {
         origin : { type:String, default:"http://localhost:8080" }
     },
     computed : {
+        joinedProps() {
+            return [this.videoid, this.list, this.listType, this.width, this.height, this.autoplay, this.loop, this.origin].join();
+        },
         stylePlayer() {
             return { width:this.width, height:this.height }
         },
@@ -73,9 +75,15 @@ export default {
                 var firstScriptTag = document.getElementsByTagName('script')[0];
                 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
             }
+            if (this.player) {
+                const oldPlayer = window.document.getElementById("youtube-vue-player")
+                const newPlayer = document.createElement("div");
+                newPlayer.id = 'youtube-vue-player'
+                oldPlayer.parentNode.insertBefore(newPlayer, oldPlayer);
+                oldPlayer.parentNode.removeChild(oldPlayer);
+            }
         },
         configPlayer() {
-            this.player = null;
             this.player = new window.YT.Player('youtube-vue-player', {
                 height: this.height,
                 width: this.width,
