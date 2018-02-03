@@ -5,7 +5,7 @@ This is based on https://developers.google.com/youtube/player_parameters?hl=en
 
 > Contact : stepanowon@hotmail.com   
 > Author : Stephen Won(원형섭), OpenSG Inc.  
-> Online Demo1 : [jsfiddle](https://jsfiddle.net/boj2h8h8/) 
+> Online Demo1 : [jsfiddle](https://jsfiddle.net/boj2h8h8/)  
 > Online Demo2 : http://sample.bmaster.kro.kr/youtube-vue/
 
 ## Screen Shot
