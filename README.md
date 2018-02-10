@@ -3,6 +3,15 @@
 Youtube Player Component for Vue.js 2.x.
 This is based on https://developers.google.com/youtube/player_parameters?hl=en 
 
+[![npm](https://img.shields.io/npm/v/youtube-vue.svg )](https://www.npmjs.com/package/youtube-vue)
+[![npm](https://img.shields.io/npm/dm/youtube-vue.svg)](https://www.npmjs.com/package/youtube-vue)
+[![GitHub stars](https://img.shields.io/github/stars/stepanowon/youtube-vue.svg?style=social&label=Stars&style=for-the-badge)](https://github.com/stepanowon/youtube-vue/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/stepanowon/youtube-vue.svg?style=social&label=Fork&style=for-the-badge)](https://github.com/stepanowon/youtube-vue/network)
+[![Build Status](https://travis-ci.org/stepanowon/youtube-vue.svg?branch=master)](https://travis-ci.org/stepanowon/youtube-vue)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+
+------------
+
 > Contact : stepanowon@hotmail.com   
 > Author : Stephen Won(원형섭), OpenSG Inc.  
 > Online Demo1 : [jsfiddle](https://jsfiddle.net/boj2h8h8/)  
