@@ -1,3 +1,4 @@
 node_modules/
-yarn.lock
-npm-degug.log
+yarn.lock*
+package-lock.json*
+npm-degug.log*
