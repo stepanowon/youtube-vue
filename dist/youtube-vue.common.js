@@ -1747,7 +1747,7 @@ module.exports = function (key) {
 __webpack_require__.r(__webpack_exports__);
 
 // EXPORTS
-__webpack_require__.d(__webpack_exports__, "install", function() { return /* reexport */ src_install; });
+__webpack_require__.d(__webpack_exports__, "YoutubeVue", function() { return /* reexport */ YoutubeVue; });
 
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/setPublicPath.js
 // This file is imported into lib/wc client bundles.
@@ -2125,7 +2125,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 
-/* harmony default export */ var src_0 = (YoutubeVue);
+/* harmony default export */ var src_0 = (src_install);
 // CONCATENATED MODULE: ./node_modules/@vue/cli-service/lib/commands/build/entry-lib.js
 
 

@@ -10,7 +10,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export {
-    install
+    YoutubeVue
 }
 
-export default YoutubeVue
+export default install
