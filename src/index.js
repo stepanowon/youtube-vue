@@ -1,7 +1,7 @@
 import YoutubeVue from './components/YoutubeVue.vue'
 
 const install = (Vue) => {
-  Vue.component(YoutubeVue.name, YoutubeVue)
+  Vue.component('youtube-vue', YoutubeVue)
 }
 
 // auto install if used in browser
