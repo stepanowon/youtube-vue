@@ -32,10 +32,7 @@ MIT
 #### CDN - install
 ~~~
 <script type="text/javascript" src="https://unpkg.com/vue"></script>
-<script type="text/javascript" src="https://cdn.rawgit.com/stepanowon/youtube-vue/master/dist/youtube-vue.min.js"></script>
-<script type="text/javascript">
-    Vue.use(YoutubeVue)
-</script>
+<script type="text/javascript" src="https://contactsvc2.vercel.app/js/youtube-vue.umd.js"></script>
 ~~~
 #### CDN - usage
 ~~~
@@ -46,7 +43,6 @@ MIT
 </div>
 ......
 <script type="text/javascript">
-    Vue.use(YoutubeVue)
     new Vue({
         el : "#app",
         data : {
