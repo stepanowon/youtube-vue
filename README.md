@@ -33,7 +33,7 @@ MIT
 #### CDN - install
 ~~~
 <script type="text/javascript" src="https://unpkg.com/vue"></script>
-<script type="text/javascript" src="https://contactsvc2.vercel.app/js/youtube-vue.umd.js"></script>
+<script type="text/javascript" src="https://unpkg.com/youtube-vue@2.0.5"></script>
 ~~~
 #### CDN - usage
 ~~~
