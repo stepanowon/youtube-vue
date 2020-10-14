@@ -33,7 +33,7 @@ MIT
 #### CDN - install
 ~~~
 <script type="text/javascript" src="https://unpkg.com/vue"></script>
-<script type="text/javascript" src="https://unpkg.com/youtube-vue@2.0.5"></script>
+<script type="text/javascript" src="https://unpkg.com/youtube-vue"></script>
 ~~~
 #### CDN - usage
 ~~~
@@ -81,7 +81,7 @@ yarn add youtube-vue
 </template>
 
 <script>
-import YoutubeVue from 'youtube-vue'
+import { YoutubeVue } from 'youtube-vue'
 
 export default {
   name: 'App',
