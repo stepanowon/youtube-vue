@@ -4,6 +4,7 @@
   "description": "Youtube player component for vue.js 2.x",
   "private": false,
   "main": "dist/youtube-vue.common.js",
+  "unpkg": "dist/youtube-vue.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
