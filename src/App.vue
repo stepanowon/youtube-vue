@@ -17,7 +17,6 @@
 
 <script>
 import YoutubeVue from './components/YoutubeVue.vue'
-//import YoutubeVue from 'youtube-vue'
 
 export default {
   name: 'App',

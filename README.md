@@ -27,14 +27,12 @@ This is based on https://developers.google.com/youtube/player_parameters?hl=en
 #### by playlist
 <img src="https://raw.githubusercontent.com/stepanowon/youtube-vue/master/images/playlist.jpg" width="640" height="480" />
 
-
-
 ## License
 MIT 
 ## Usage  
 #### CDN - install
 ~~~
-<script type="text/javascript" src="https://unpkg.com/vue@2.5.13/dist/vue.js"></script>
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/stepanowon/youtube-vue/master/dist/youtube-vue.min.js"></script>
 <script type="text/javascript">
     Vue.use(YoutubeVue)

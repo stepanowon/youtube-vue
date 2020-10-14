@@ -97,7 +97,7 @@ export default {
                     autoplay: this.autoplay,  
                 },
                 events : {
-                    'onReady': (e) => {
+                    'onReady': () => {
                         this.$emit('ready')
                     },
                     'onStateChange': (e) => {
