@@ -23,8 +23,8 @@ export default {
   name: 'App',
   data() {
     return { 
-      temp: { video_id:"PABUl_EX_hw", listType:"search", list:"", loop:0 },
-      play : { video_id:"PABUl_EX_hw", listType:"search", list:"", loop:0 }
+      temp: { video_id:"3P1CnWI62Ik", listType:"search", list:"", loop:0 },
+      play : { video_id:"3P1CnWI62Ik", listType:"search", list:"", loop:0 }
     }
   },
   components: {
