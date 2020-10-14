@@ -8477,3 +8477,11 @@ yorkie@^2.0.0:
     is-ci "^1.0.10"
     normalize-path "^1.0.0"
     strip-indent "^2.0.0"
+
+youtube-vue@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/youtube-vue/-/youtube-vue-2.0.1.tgz#63c028bda50bf2cd056d1ce0bebbf1606e8a01be"
+  integrity sha512-A2OReGzS1i2y0rRxcoeqotW+SOLxR8ohWHkLXl0S5WM3u8mxSfCBif07+BcFVKi8DCd763TtZcrXDDy1iwI7QQ==
+  dependencies:
+    core-js "^3.6.5"
+    vue "^2.6.11"
