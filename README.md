@@ -127,27 +127,10 @@ export default {
    * videoid 
       - type : String 
       - Youtube video id
-   * hl 
-      - type : String
-      - default value : 'en' 
-      - interface language(ex:en, ko, ja)
    * loop
       - type : Number
       - default value : 0
       - a setting of 1 causes the player to play the initial video again and again
-   * rel
-      - type : Number
-      - default value : 0
-      - a setting of 1 causes the player to show related videos when playback of the initial video ends.
-   * listType
-	   - type : String
-	   - list type : 'search', 'playlist', 'user_uploads'
-   * list
-      - type : String
-      - If the listType parameter value is search, then the list parameter value specifies the search query.
-      - If the listType parameter value is user_uploads, then the list parameter value identifies the YouTube channel whose uploaded videos will be loaded.
-      - If the listType parameter value is playlist, then the list parameter value specifies a YouTube playlist ID. In the parameter value, you need to prepend the playlist ID with the letters PL as shown in the example below.
-      - if you want to use this parameter, videoid parameter must not be specified. 
 ##
 #### methods
   * playVideo()
