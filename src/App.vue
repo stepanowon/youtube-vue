@@ -1,30 +1,27 @@
 <template>
-  <div id="app">
+  <div>
     <div>
       video_id : <input type="text" v-model="temp.video_id" /><br />
-      listType : <input type="text"  v-model="temp.listType" /><br />
-      list : <input type="text"  v-model="temp.list" /><br />
       loop : <input type="number"  v-model.number="temp.loop" /><br />
       <button @click="applyConfig">Apply</button>
       <button @click="playCurrentVideo">Play</button>
       <button @click="stopCurrentVideo">Stop</button>
       <button @click="pauseCurrentVideo">Pause</button>
     </div>
-    <YoutubeVue ref="player" :videoid="play.video_id" :width="640" :height="480" :autoplay="1" :loop="play.loop" :listType="play.listType" 
-      :list="play.list" @ended="onEnded" @paused="onPaused" @played="onPlayed"/>
+    <YoutubeVue ref="youtube" :videoid="play.video_id" :loop="play.loop" :width="480" :height="320"  
+      @ended="onEnded" @paused="onPaused" @played="onPlayed"/>
   </div>
 </template>
 
 <script>
-import YoutubeVue from './components/YoutubeVue.vue'
-//import YoutubeVue from 'youtube-vue'
+import YoutubeVue from '@/components/YoutubeVue'
 
 export default {
   name: 'App',
   data() {
     return { 
-      temp: { video_id:"3P1CnWI62Ik", listType:"search", list:"", loop:0 },
-      play : { video_id:"3P1CnWI62Ik", listType:"search", list:"", loop:0 }
+      temp: { video_id:"3P1CnWI62Ik", loop:1 },
+      play : { video_id:"3P1CnWI62Ik", loop:1 }
     }
   },
   components: {
@@ -35,16 +32,17 @@ export default {
       this.play = Object.assign(this.play, this.temp)
     },
     playCurrentVideo() {
-      this.$refs.player.playVideo();
+      this.$refs.youtube.player.playVideo();
     },
     stopCurrentVideo() {
-      this.$refs.player.stopVideo();
+      this.$refs.youtube.player.stopVideo();
     },
     pauseCurrentVideo() {
-      this.$refs.player.pauseVideo();
+      this.$refs.youtube.player.pauseVideo();
     },
     onEnded() {
       console.log("## OnEnded")
+      this.$refs.youtube.player.playVideo();
     },
     onPaused() {
       console.log("## OnPaused")
@@ -55,16 +53,3 @@ export default {
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-
-.vid_input { margin:10px 10px 10px 10px; width:640px; }
-</style>
