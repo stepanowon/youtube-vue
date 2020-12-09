@@ -1,7 +1,9 @@
 
 # youtube-vue 
-Youtube Player Component for Vue.js 2.x(youtube-player wrapper for vue 2.x)
-This is based on https://developers.google.com/youtube/player_parameters?hl=en 
+Youtube Player Component for Vue.js 2.x.  
+This is based on [youtube-player](https://github.com/gajus/youtube-player) 
+
+Youtube Player for Vue 3.x--> [Here](https://github.com/stepanowon/youtube-vue3)  
 
 [![npm](https://img.shields.io/npm/v/youtube-vue.svg )](https://www.npmjs.com/package/youtube-vue)
 [![npm](https://img.shields.io/npm/dm/youtube-vue.svg)](https://www.npmjs.com/package/youtube-vue)
