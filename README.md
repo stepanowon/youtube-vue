@@ -16,8 +16,7 @@ Youtube Player for Vue 3.x--> [Here](https://github.com/stepanowon/youtube-vue3)
 
 > Contact : stepanowon@hotmail.com   
 > Author : Stephen Won(원형섭), OpenSG Inc.  
-> Online Demo1 : https://youtube-vue.vercel.app/    
-> Online Demo2 : [jsfiddle](https://jsfiddle.net/StephenWon/peLaqxcd/)
+> Online Demo : https://youtube-vue.vercel.app/    
 
 ## Screen Shot
 <img src="https://raw.githubusercontent.com/stepanowon/youtube-vue/master/images/videoid.png" width="640" height="480" />
