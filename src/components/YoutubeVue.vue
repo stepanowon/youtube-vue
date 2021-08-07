@@ -1,5 +1,5 @@
 <template>
-  <div ref="player" id="youtube-vue-player-soma"></div>
+  <div ref="player" :id="`youtube-vue-player-${videoid}`"></div>
 </template>
 
 <script>
@@ -23,7 +23,7 @@ export default {
             autoplay:this.autoplay, 
             loop:this.loop
         }
-        this.player = YouTubePlayer('youtube-vue-player-soma', {
+        this.player = YouTubePlayer(`youtube-vue-player-${this.videoid}`, {
             host: "https://www.youtube.com",
             width: this.width,
             height: this.height,
