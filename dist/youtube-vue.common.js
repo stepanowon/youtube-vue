@@ -3630,12 +3630,12 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1d60f726-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/YoutubeVue.vue?vue&type=template&id=f8590ee0&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"414e3d1a-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--1-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/YoutubeVue.vue?vue&type=template&id=01bf9ad2&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"player",attrs:{"id":_vm.playerid}})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/YoutubeVue.vue?vue&type=template&id=f8590ee0&
+// CONCATENATED MODULE: ./src/components/YoutubeVue.vue?vue&type=template&id=01bf9ad2&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.number.constructor.js
 var es_number_constructor = __webpack_require__("a9e3");
@@ -3687,10 +3687,7 @@ var shortid_default = /*#__PURE__*/__webpack_require__.n(shortid);
     },
     speed: {
       type: Number,
-      default: 1,
-      validator: function validator(v) {
-        return Number(v) === 0 || Number(v) === 1;
-      }
+      default: 1
     },
     controls: {
       type: Number,
@@ -3751,9 +3748,11 @@ var shortid_default = /*#__PURE__*/__webpack_require__.n(shortid);
     delete this.player;
   },
   watch: {
-    speed: function speed() {
-      this.player.setPlaybackRate(this.speed);
-      this.player.playVideo();
+    speed: {
+      immediate: true,
+      handler: function handler(newValue) {
+        this.player.setPlaybackRate(newValue);
+      }
     },
     videoid: function videoid() {
       this.player.loadVideoById(this.videoid);
