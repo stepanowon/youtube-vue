@@ -60,11 +60,8 @@ export default {
     delete this.player;
   },
   watch: {
-    speed: {
-      immediate: true,
-      handler(newValue) {
-        this.player.setPlaybackRate(newValue);
-      },
+    speed() {
+      this.player.setPlaybackRate(this.speed);
     },
     videoid() {
       this.player.loadVideoById(this.videoid);

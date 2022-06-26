@@ -3,6 +3,7 @@
     <div>
       video_id : <input type="text" v-model="temp.video_id" /><br />
       loop : <input type="number" v-model.number="temp.loop" /><br />
+      speed : <input type="number" v-model.number="temp.speed" /><br />
       <button @click="applyConfig">Apply</button>
       <button @click="playCurrentVideo">Play</button>
       <button @click="stopCurrentVideo">Stop</button>
@@ -16,9 +17,11 @@
       :height="320"
       :modestbranding="1"
       :controls="1"
+      :speed="play.speed"
       @ended="onEnded"
       @paused="onPaused"
       @played="onPlayed"
+      @speed-changed="onSpeedChanged"
     />
   </div>
 </template>
@@ -30,8 +33,8 @@ export default {
   name: "App",
   data() {
     return {
-      temp: { video_id: "3P1CnWI62Ik", loop: 1 },
-      play: { video_id: "3P1CnWI62Ik", loop: 1 },
+      temp: { video_id: "3P1CnWI62Ik", loop: 1, speed: 1 },
+      play: { video_id: "3P1CnWI62Ik", loop: 1, speed: 1 },
     };
   },
   components: {
@@ -59,6 +62,9 @@ export default {
     },
     onPlayed() {
       console.log("## OnPlayed");
+    },
+    onSpeedChanged() {
+      console.log("## OnSpeedChanged");
     },
   },
 };
