@@ -14,6 +14,7 @@ export default {
     autoplay: { type: Number, default: 1, validator: (v) => Number(v) === 0 || Number(v) === 1 },
     videoid: { type: String, required: true },
     loop: { type: Number, default: 1, validator: (v) => Number(v) === 0 || Number(v) === 1 },
+    speed: { type: Number, default: 1, validator: (v) => Number(v) === 0 || Number(v) === 1 },
     controls: { type: Number, default: 0, validator: (v) => Number(v) === 0 || Number(v) === 1 },
     modestbranding: { type: Number, default: 1, validator: (v) => Number(v) === 0 || Number(v) === 1 },
   },
@@ -50,12 +51,19 @@ export default {
         this.$emit("played");
       }
     });
+    this.player.on("playbackRateChange", (e) => {
+      this.$emit("speed-changed", e.data)
+    });
   },
   destroyed() {
     this.player.destroy();
     delete this.player;
   },
   watch: {
+    speed() {
+      this.player.setPlaybackRate(this.speed);
+      this.player.playVideo();
+    },
     videoid() {
       this.player.loadVideoById(this.videoid);
       this.player.playVideo();
