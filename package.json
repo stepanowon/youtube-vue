@@ -1,6 +1,6 @@
 {
   "name": "youtube-vue",
-  "version": "2.0.9",
+  "version": "2.0.12",
   "description": "Youtube player component for vue.js 2.x",
   "private": false,
   "main": "dist/youtube-vue.common.js",
@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/stepanowon/youtube-vue.git"
+    "url": "git+https://github.com/yazinsai/youtube-vue.git"
   },
   "keywords": [
     "Youtube",
@@ -23,9 +23,9 @@
   "author": "Stephen Won",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/stepanowon/youtube-vue/issues"
+    "url": "https://github.com/yazinsai/youtube-vue/issues"
   },
-  "homepage": "https://github.com/stepanowon/youtube-vue",
+  "homepage": "https://github.com/yazinsai/youtube-vue",
   "dependencies": {
     "core-js": "^3.6.5",
     "shortid": "^2.2.16",
