@@ -1,15 +1,15 @@
 {
   "name": "youtube-vue",
-  "version": "2.0.12",
+  "version": "2.0.13",
   "description": "Youtube player component for vue.js 2.x",
   "private": false,
   "main": "dist/youtube-vue.common.js",
   "unpkg": "dist/youtube-vue.umd.js",
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "build:lib": "vue-cli-service build --target lib --filename youtube-vue --name YoutubeVue src/index.js",
-    "lint": "vue-cli-service lint"
+    "serve": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service serve",
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build",
+    "build:lib": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service build --target lib --filename youtube-vue --name YoutubeVue src/index.js",
+    "lint": "cross-env NODE_OPTIONS=--openssl-legacy-provider vue-cli-service lint"
   },
   "repository": {
     "type": "git",
@@ -27,19 +27,21 @@
   },
   "homepage": "https://github.com/yazinsai/youtube-vue",
   "dependencies": {
-    "core-js": "^3.6.5",
+    "core-js": "^3.8.3",
+    "cross-env": "^7.0.3",
     "shortid": "^2.2.16",
-    "vue": "^2.6.11",
-    "youtube-player": "^5.5.2"
+    "vue": "^2.6.14",
+    "youtube-player": "^5.6.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~5.0.8",
-    "@vue/cli-plugin-eslint": "~5.0.8",
-    "@vue/cli-service": "~5.0.8",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.2.2",
-    "vue-template-compiler": "^2.6.11"
+    "@babel/core": "^7.12.16",
+    "@babel/eslint-parser": "^7.12.16",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-eslint": "~5.0.0",
+    "@vue/cli-service": "^3.3.1",
+    "eslint": "^7.32.0",
+    "eslint-plugin-vue": "^8.0.3",
+    "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {
     "root": true,
@@ -51,7 +53,7 @@
       "eslint:recommended"
     ],
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "@babel/eslint-parser"
     },
     "rules": {}
   },
